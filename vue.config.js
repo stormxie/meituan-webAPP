@@ -4,12 +4,9 @@ module.exports = {
   devServer: {
     proxy: {
       '/api': {
-        target: 'http://localhost:8010',
-        pathRewrite: {
-          '^/api': '/api'
-        }
+        target: 'http://localhost:3000',
       }
-    }
+    },
   },
   chainWebpack: (config) => {
     config.resolve.alias

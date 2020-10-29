@@ -66,7 +66,7 @@ export default {
     },
     handleClick2 () {
       axios.post(
-        'api/user/login', 
+        '/api/user/login', 
         {"userphone": this.phone, "password": this.password},
         {headers:{"content-type": "application/json"}}
       )
@@ -75,7 +75,8 @@ export default {
     postSucc (res) {
       let data = res.data
       if (data.ret) {
-        this.changeUserName(data.data.username)
+        console.log('to self')
+        this.changeUserName(data.message)
         this.$router.push('/self')
       } else {
         alert('密码或账号错误，请重试。')

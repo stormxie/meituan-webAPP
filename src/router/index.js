@@ -13,23 +13,23 @@ export default new Router({
     {
       path: '/',
       name: 'Home',
-      component: Home // 异步组件按需加载: component: () => import('@/pages/home/Home')
+      component: () => import('@/pages/home/Home') // 异步组件按需加载: component: () => import('@/pages/home/Home')
     }, {
       path: '/city',
       name: 'City',
-      component: City
+      component: () => import('@/pages/city/City')
     }, {
       path: '/detail/:id',
       name: 'Detail',
-      component: Detail
+      component: () => import('@/pages/detail/Detail')
     }, {
       path: '/login',
       name: 'Login',
-      component: Login
+      component: () => import('@/pages/login/Login')
     }, {
       path: '/self',
       name: 'Self',
-      component: Self
+      component: () => import('@/pages/self/Self')
     }
   ],
   scrollBehavior (to, from, savedPosition) {

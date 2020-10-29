@@ -26,6 +26,7 @@ export default {
   },
   methods: {
     handleClick () {
+      console.log('click')
       axios.get('/api/user/logincheck')
       .then(this.getSucc)
     },

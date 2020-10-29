@@ -51,7 +51,7 @@ export default {
   watch: {
     keyword () {
       if (this.timer) {
-        clearTimeout()
+        clearTimeout(this.timer)
       }
       if (!this.keyword.length) {
         this.searchList = []

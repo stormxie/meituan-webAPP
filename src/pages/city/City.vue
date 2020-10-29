@@ -35,16 +35,20 @@ export default {
       this.letter = letter
     },
     getCityInfo () {
-      axios.get('/api/city.json')
+      axios.get('/api/page/city.json')
         .then(this.getCityInfosucc)
     },
     getCityInfosucc (res) {
+      console.log(res)
       res = res.data
+      console.log(res.ret)
+      console.log(res.data)
       if (res.ret && res.data) {
         const data = res.data
         this.cities = data.cities
         this.hotCities = data.hotCities
         this.alphabetList = Object.keys(data.cities)
+        console.log(this.cities)
       }
     }
   },

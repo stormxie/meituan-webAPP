@@ -34,7 +34,7 @@ export default {
     },
     handleTouchMove (e) {
       if (this.touchStatus) {
-        // 函数节流，通过clear timer，每8秒内最多只执行一次setTimeout里面的函数
+        // 函数防抖，通过clear timer，每8秒内最多只执行一次setTimeout里面的函数
         if (this.timer) {
           clearTimeout(this.timer)
         }
