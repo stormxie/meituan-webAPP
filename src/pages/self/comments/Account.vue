@@ -2,7 +2,7 @@
     <div class="account">
         <div class="wrapper">
             <router-link to="/login" tag="div" class="account-head"><span class="iconfont">&#xe620;</span></router-link>
-            <div class="account-name">{{this.userName}}</div>
+            <div class="account-name">{{userName}}</div>
             <div class="account-balance">账户余额: 0元</div>
             <div class="forward-icon"><span class="iconfont">&#xe601;</span></div>
         </div>

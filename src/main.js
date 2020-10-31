@@ -1,4 +1,4 @@
-import Vue from 'vue';
+import Vue, { createApp } from 'vue';
 import App from './App';
 import router from './router';
 import VueAwesomeSwiper from 'vue-awesome-swiper';
@@ -9,11 +9,5 @@ import 'styles/reset.css';
 import 'swiper/dist/css/swiper.css';
 import store from './store';
 
-Vue.config.productionTip = false
-Vue.use(VueAwesomeSwiper)
 
-new Vue({
-  router,
-  store,
-  render: h => h(App)
-}).$mount('#app')
+createApp(App).use(router).use(store).use(VueAwesomeSwiper).mount('#app')

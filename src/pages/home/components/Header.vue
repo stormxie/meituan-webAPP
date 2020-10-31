@@ -1,7 +1,7 @@
 <template>
   <div class="header">
     <router-link to="/city">
-      <div class="header-left">{{this.city}}
+      <div class="header-left">{{city}}
         <span class="iconfont arrow-icon">&#xe63c;</span>
       </div>
     </router-link>

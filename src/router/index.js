@@ -1,14 +1,16 @@
 import Vue from 'vue'
-import Router from 'vue-router'
+import Router, { createRouter, createWebHashHistory } from 'vue-router';
 import Home from '@/pages/home/Home'
 import City from '@/pages/city/City'
 import Detail from '@/pages/detail/Detail'
 import Login from '@/pages/login/Login'
 import Self from '@/pages/self/Self'
 
-Vue.use(Router)
+// Vue.use(Router)
 
-export default new Router({
+export default createRouter({
+  history: createWebHashHistory(),
+
   routes: [
     {
       path: '/',
@@ -32,10 +34,11 @@ export default new Router({
       component: () => import('@/pages/self/Self')
     }
   ],
+
   scrollBehavior (to, from, savedPosition) {
     return {
       x: 0,
       y: 0
     }
   }
-})
+});

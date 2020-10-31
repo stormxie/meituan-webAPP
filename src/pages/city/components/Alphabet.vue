@@ -1,7 +1,7 @@
 <template>
     <ul class="alphabet">
         <li
-          class="item" v-for="item of list" :key="item" :ref="item" @click="handleLetterClick" @touchstart.prevent="handleTouchStart" @touchmove="handleTouchMove" @touchend="handleTouchEnd"
+          class="item" v-for="item of list" :key="item" :ref="item" @click="handleLetterClick" @touchstart="handleTouchStart" @touchmove="handleTouchMove" @touchend="handleTouchEnd"
         >
           {{item}}
         </li>
@@ -22,7 +22,7 @@ export default {
     }
   },
   updated () {
-    this.startY = this.$refs['A'][0].offsetTop
+    this.startY = this.$refs['A'].offsetTop
   },
   methods: {
     handleLetterClick (e) {
